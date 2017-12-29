@@ -1,1 +1,20 @@
-script: ":" # bash NOOP
+language: "python"
+python:
+    - "3.4"
+cache: "pip"
+install:
+    - "pip install .[tests]"
+script:
+    - "pytest"
+after_success:
+    - "coveralls"
+deploy:
+    provider: "script"
+    script: "deployment/deploy.sh"
+    on:
+        branch: "master"
+        python: "3.4"
+        repo: "pyvec/python.cz"
+notifications:
+    slack:
+        secure: "s/PCU4+geUozmw3AJguPYpv/YFNZVYmQ30A3DZpbSOE/9HDEgqbaF/hONY1VhHriRBG1EJ2uSezbxjOveyJPV+UMGJFMPU4c4Mw4AHxyROSnJe/MpOKPd8QRgbtYWYwy5UI47bzxotGoN49Mk0EjqhaFk9DFb14et9YPwMDbrVY="

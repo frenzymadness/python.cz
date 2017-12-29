@@ -1,0 +1,24 @@
+{% if lang == 'cs' %}
+    {% set base_url = 'http://pyvo.cz' %}
+{% else %}
+    {% set base_url = 'http://pyvo.cz/en' %}
+{% endif %}
+
+<div class="row">
+    <a class="meetups-city col-md-6 col-sm-6 col-xs-6" href="{{ base_url }}/praha">
+        <img src="{{ url_for('static', filename='images/pyvo.png') }}" height="100">
+        {% if lang == 'cs' %}Praha{% else %}Prague{% endif %}
+    </a>
+    <a class="meetups-city col-md-6 col-sm-6 col-xs-6" href="{{ base_url }}/brno">
+        <img src="{{ url_for('static', filename='images/pyvo.png') }}" height="100">
+        Brno
+    </a>
+    <a class="meetups-city col-md-6 col-sm-6 col-xs-6" href="{{ base_url }}/ostrava">
+        <img src="{{ url_for('static', filename='images/pyvo.png') }}" height="100">
+        Ostrava
+    </a>
+    <a class="meetups-city col-md-6 col-sm-6 col-xs-6" href="{{ base_url }}/olomouc">
+        <img src="{{ url_for('static', filename='images/pyvo.png') }}" height="100">
+        Olomouc
+    </a>
+</div>

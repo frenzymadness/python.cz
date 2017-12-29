@@ -3,6 +3,7 @@
 # Packages
 *.egg
 *.egg-info
+*.eggs
 dist
 build
 eggs
@@ -25,3 +26,8 @@ pip-log.txt
 
 # Mr Developer
 .mr.developer.cfg
+.DS_Store
+
+# Cache
+cache
+.cache
